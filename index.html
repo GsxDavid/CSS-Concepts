@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>CSS Concepts</title>
+</head>
+
+<body>
+    <section>
+        <h1> CSS Layout </h1>
+        <p>SS Layout se refiere a cómo se estructuran y colocan los elementos en una página web utilizando estilos CSS.
+            En
+            otras palabras, el diseño CSS se ocupa de la disposición y el posicionamiento de los elementos en la
+            interfaz de
+            usuario. Un buen diseño ayuda a organizar la información de manera clara y atractiva, facilitando la
+            comprensión
+            y navegación para los usuarios.</p>
+        <p>Algunos aspectos clave del CSS Layout incluyen:</p>
+
+        <ul>
+            <li> <a href="#position-guide">Position</a> </li>
+            <li> <a href="#flexbox-guide">Flexbox</a> </li>
+            <li> <a href="#grid-guide">Grid</a> </li>
+        </ul>
+    </section>
+
+    <section id="position-guide">
+        <h2>Position</h2>
+    </section>
+    <section id="flexbox-guide">
+        <section>
+            <h2>Flexbox</h2>
+            <p>
+                Flexbox, o "Flexible Box", es un modelo de diseño en CSS que proporciona una manera eficiente y
+                predecible
+                de distribuir espacio entre elementos y alinearlos de manera flexible, independientemente de su tamaño y
+                orden original. Con Flexbox, puedes crear diseños complejos y realizar alineaciones de manera más
+                sencilla
+                que con los modelos de diseño tradicionales.
+            </p>
+        </section>
+
+        <div class="parent">
+
+            <div class="item">Align Self</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+
+
+        </div>
+
+        <section>
+            <h2>Propiedades</h2>
+            Es importante entender cómo funcionan las siguientes propiedades para trabajar correctamente con flexbox
+
+            <h3>Justify content (justify-content)</h3>
+            <p>Centra los elementos a lo largo del eje principal, ya sea horizontal o verticalmente, según la dirección
+                del
+                contenedor (row o column).</p>
+
+            <h3>Align Items (align-items)</h3>
+            <p> Alinear los elementos a lo largo del eje cruzado</p>
+
+            <h3>Flex wrap</h3>
+            <p>
+                flex-wrap es una propiedad de CSS que se utiliza en contenedores flexibles (display: flex;) para
+                especificar
+                si los elementos hijos deben envolverse o no dentro del contenedor flexible. En otras palabras, controla
+                cómo se manejan los elementos cuando no hay suficiente espacio en el contenedor principal.
+            </p>
+            <ul>
+                <li><b>nowrap:</b> Los elementos flexibles se colocarán en una sola línea horizontal sin envolver. Si no
+                    hay
+                    suficiente espacio, los elementos pueden desbordar del contenedor.
+                </li>
+                <li><b>wrap:</b> Los elementos se envuelven a la siguiente línea si no hay suficiente espacio en la fila
+                    actual. Se
+                    crean nuevas filas según sea necesario.
+                </li>
+                <li><b>wrap-reverse:</b> Similar a wrap, pero las nuevas filas se crearán en sentido inverso, de abajo
+                    hacia
+                    arriba.
+                </li>
+            </ul>
+            <h3>Flex Grow</h3>
+            <p>Es una propiedad que determina la capacidad de un elemento flexible para crecer en relación con otros
+                elementos flexibles dentro del mismo contenedor cuando hay espacio adicional disponible en el eje
+                principal.
+            </p>
+
+            <h3>Flex Shrink</h3>
+            <p>flex-shrink es una propiedad que determina la capacidad de un elemento flexible para contraerse en
+                relación
+                con otros elementos flexibles dentro del mismo contenedor cuando hay escasez de espacio en el eje
+                principal.
+            </p>
+        </section>
+    </section>
+
+    <section id="grid-guide">
+        <section>
+            <h2>Grid</h2>
+            <p>
+                El concepto de Grid (o cuadrícula) en diseño web se refiere a un sistema de diseño bidimensional que
+                permite organizar el contenido en filas y columnas. El diseño basado en cuadrícula ofrece una estructura
+                flexible y poderosa que facilita la creación de diseños complejos y alineados.
+            </p>
+            <p>Ejemplos: </p>
+
+            <div id="buttons">
+                <button>Ejemplo 1</button>
+                <button>Ejemplo 2</button>
+                <button>Ejemplo 3</button>
+                <button>Ejemplo 4</button>
+            </div>
+
+            <section class="container hidden">
+                <div class="">1</div>
+                <div class="">2</div>
+                <div class="">3</div>
+                <div class="">4</div>
+                <div class="">5</div>
+                <div class="">6</div>
+                <div class="">7</div>
+            </section>
+
+            <div id="layout" class="hidden">
+                <div id="navbar">
+                    Navbar
+                </div>
+                <section class="container2">
+                    <div>SideBar (Aside)</div>
+                    <div>
+                        <div>Main Content</div>
+
+                    </div>
+                </section>
+            </div>
+
+            <div id="images" class="hidden">
+                <img src="https://m.media-amazon.com/images/I/71Nau-0ZheL._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                <img src="https://m.media-amazon.com/images/I/71Nau-0ZheL._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+                <img src="https://m.media-amazon.com/images/I/71Nau-0ZheL._AC_UF894,1000_QL80_.jpg" alt="" srcset="">
+            </div>
+
+            <div class="container3 hidden">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+            </div>
+
+
+        </section>
+    </section>
+
+    <button id="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#585555" class="bi bi-arrow-up-circle-fill"
+            viewBox="0 0 16 16">
+            <path
+                d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
+        </svg>
+    </button>
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const icon = document.getElementById('icon');
+
+        function toggleButtonVisibility() {
+            const scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+            const triggerOffset = 100;
+
+            if (scrollPosition > windowHeight - triggerOffset) {
+                icon.style.display = 'block';
+            } else {
+                icon.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('scroll', toggleButtonVisibility);
+
+        toggleButtonVisibility();
+
+        icon.addEventListener('click', () => {
+            window.scroll({
+                top: 0,
+                behavior: "smooth"
+            })
+        })
+
+
+        const ejemplos = [
+            document.querySelector('.container'),
+            document.getElementById('layout'),
+            document.getElementById('images'),
+            document.querySelector('.container3')
+        ];
+
+
+        const buttons = document.querySelectorAll('#buttons button');
+
+
+        for (let index = 0; index < buttons.length; index++) {
+            buttons[index].addEventListener('click', () => {
+                ejemplos[index].classList.toggle('hidden');
+
+                if (!ejemplos[index].classList.contains('hidden')) {
+                    ejemplos[index].scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center',
+                        inline: 'center'
+                    });
+                }
+
+            })
+        }
+
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,179 @@
+html,
+body {
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+/* #flexbox-guide {
+  display: none;
+}
+
+#position-guide {
+  display: none;
+}
+#grid-guide {
+  display: none;
+} */
+
+section {
+  font-size: 18px;
+}
+
+.parent {
+  /* El eje principal de flex es row <- de izquierda a derecha */
+  width: 400px;
+  height: 300px;
+  border: 1px solid;
+  display: flex;
+  /* Centra los elementos a lo largo del eje principal, ya sea horizontal o verticalmente, según la dirección del contenedor (row o column). */
+  justify-content: center;
+  /* Alinear los elementos a lo largo del eje cruzado */
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.item {
+  color: white;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  border: 1px solid;
+  margin: 1px;
+  border-radius: 3px;
+  background-color: coral;
+}
+
+.item:nth-child(1) {
+  background-color: indigo;
+  align-self: flex-end;
+  /* El número de flex podría tomarse como referencia relativa de cuanto espacio debe tomar respecto al padre */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item:nth-child(2) {
+  background-color: crimson;
+}
+.item:nth-child(3) {
+  background-color: cyan;
+}
+
+.container {
+  background-color: crimson;
+  border: 2px solid brown;
+  border-radius: 10px;
+  display: grid;
+  /* La unidad de fracción (fr) es una unidad flexible que se utiliza para distribuir el espacio disponible proporcionalmente entre las filas o columnas. */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: minmax(100px, 1fr) 2fr;
+  /* grid-template-rows: 1fr 2fr 3fr 4fr 1fr; */
+  grid-template-rows: 1fr repeat(2, 2fr);
+}
+
+.container div {
+  background-color: coral;
+  border: 2px solid black;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  margin: 5px;
+}
+
+.container2 {
+  margin: 0 0 10px 0;
+  background-color: crimson;
+  display: grid;
+  grid-template-columns: minmax(100px, 200px) 1fr;
+  color: white;
+  text-align: center;
+}
+#navbar {
+  margin-top: 10px;
+  height: 100%;
+  background-color: brown;
+  color: white;
+  text-align: center;
+}
+.container2 div {
+  margin: 1px;
+}
+
+.container2 > :nth-child(2) {
+  height: 400px;
+  background-color: blue;
+}
+
+#images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: auto;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+#images img:first-child {
+  grid-column-start: span 2;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+.container3 {
+  padding: 10px 0 10px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 400px 200px 100px;
+  gap: 10px;
+}
+
+.container3 > div {
+  background-color: brown;
+  text-align: center;
+  color: white;
+}
+
+.container3 div:nth-child(1) {
+  background-color: green;
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 10px 0 10px 0;
+  padding: 20px 0 20px 0;
+}
+
+#buttons button {
+  font-size: 16px;
+  border-radius: 6px;
+  border: 0;
+  background-color: crimson;
+  color: white;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#icon {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  position: fixed;
+  margin: 10px;
+  bottom: 0px;
+  right: 0px;
+}
